@@ -1,6 +1,10 @@
 from setupdriver import create_driver
 
-
-driver = create_driver(port=4723)
+driver = create_driver(4723)
+print("Connected to Appium")
 driver.switch_to.context('UNITY')
-print(driver.page_source)
+print("Switched to Unity")
+var = driver.page_source
+
+
+
