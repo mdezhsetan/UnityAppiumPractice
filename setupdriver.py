@@ -1,7 +1,7 @@
 from appium import webdriver
 
 
-def create_driver(port):
+def setup_driver(port):
     desired_capabilities = {
         "deviceName": "Mahshad A52",
         "udid": "RZ8T11EEMNJ",
@@ -10,7 +10,8 @@ def create_driver(port):
         "platformVersion": "12",
         'altUnityHost': 'localhost',
         'altUnityPort': 13000,
-        'newCommandTimeout': 0,
-        "app": 'C:\\Users\\Mahshad\\Desktop\\build_apk\\Am.apk',
+        "app": 'C:\\Users\\Mahshad\\Desktop\\build_apk\\Am13Sep.apk',
+
     }
-    return webdriver.Remote(command_executor='http://localhost:{0}'.format(port), desired_capabilities=desired_capabilities)
+    return webdriver.Remote(command_executor='http://127.0.0.1:{0}'.format(port),
+                            desired_capabilities=desired_capabilities)
