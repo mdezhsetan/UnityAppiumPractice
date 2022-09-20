@@ -8,5 +8,5 @@ Documentation   This is my first practice with robotframework!
 
 *** Test Cases ***
 
-TEST
+TEST_CASE_NAME
     Log     This is a sample Test Case
