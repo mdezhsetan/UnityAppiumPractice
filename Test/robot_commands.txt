@@ -1,0 +1,16 @@
+
+# To run tests together:
+    robot Test1.robot Test2.robot
+
+# To run all test cases in a folder: (Test a a name of the folder which includes all testcases)
+    robot Tests
+
+# To run all tests in a folder randomly:
+    robot --randomize All Tests
+
+
+# To run special test cases:
+
+** In this case we have to use [Tags] in the code
+
+    robot -i tag1 Test
