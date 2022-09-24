@@ -13,7 +13,7 @@ TEST_CASE1
     LOG     This is a log for Test Case 1
 
 TEST_CASE2
-    [Tags]  TAG1
+    [Tags]  TAG1    TAG2
     log     This is a log for Test Case 2
 
 TEST_CASE3

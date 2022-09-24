@@ -14,3 +14,7 @@
 ** In this case we have to use [Tags] in the code
 
     robot -i tag1 Test
+
+** To use multiple tags we can use this operators:
+    tag1ANDtag2
+    tag1ORtag2
