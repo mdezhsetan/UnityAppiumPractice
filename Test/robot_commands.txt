@@ -28,3 +28,13 @@
 # To put output into the certain location
 
     robot -d [here we can write the name of the folder into the current folder or address another destination from current folder] Test
+
+# To define variables we have to out them into ***Variables*** header
+
+    ${my_variable_name}     this is variable value
+    @{my_list_name}     value1  value2  value3
+    &{my_dictionary+name}       key1=VALUE1  key2= VALUE2
+
+** To use the defined variables we can use :   ${name of the defined variable,list, dictionary}
+
+
