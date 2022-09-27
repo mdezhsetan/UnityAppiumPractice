@@ -18,3 +18,13 @@
 ** To use multiple tags we can use this operators:
     tag1ANDtag2
     tag1ORtag2
+
+# To change log:
+
+    robot --loglevel INFO Test  //default log of robot framework
+    robot --loglevel DEBUG Test //more information about all the keywords that executed
+    robot --loglevel TRACE Test //a lot more information than DEBUG
+
+# To put output into the certain location
+
+    robot -d [here we can write the name of the folder into the current folder or address another destination from current folder] Test
