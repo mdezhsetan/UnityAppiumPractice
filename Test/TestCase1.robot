@@ -2,46 +2,12 @@
 Library         OperatingSystem
 Documentation   This is my first practice with robotframework!
 ...    I practice commands declared in the robot_commands.txt
-
-*** Keywords ***
-
-Log a Username
-    [Arguments]    ${USERNAME}
-    log            ${USERNAME}
-
-Log a Password
-    [Arguments]    ${PASSWORD}
-    log            ${PASSWORD}
-
-log Usesrname and Password
-    [Arguments]    ${Username}  ${Password}
-    Log a Username    ${Username}
-    Log a Password    ${Password}
-#    log            Username:    ${Username},\n
-#    ...            Passwoed:    ${Password}
-
-*** Variables ***
-
-@{LIST}         one     two 	three
-
-${MULTILINE}    SEPARATOR=\n
-...             First line.
-...             Second line.
-...             Third line.
-${MESSAGE}      Hello, world!
-&{MANY}         first=1     second=${2}         ${3}=third
-&{EVEN MORE}    &{MANY}       first=override      empty=
-...             =empty        key\=here=value
-
-${variable1}    my name
-${Variable2}    my password
-
+Resource     ../Resources/resources.robot
 
 *** Test Cases ***
 
 TEST_CASE1
     [Tags]  TAG1
-#    LOG     This is a log for Test Case 1
     LOG     output3: ${MESSAGE}
     LOG     output1: ${LIST}[1]
     LOG     output4: ${MULTILINE}
