@@ -13,7 +13,7 @@
 
 ** In this case we have to use [Tags] in the code
 
-    robot -i tag1 Test
+    robot -i tag1
 
 ** To use multiple tags we can use this operators:
     tag1ANDtag2
@@ -38,3 +38,44 @@
 ** To use the defined variables we can use :   ${name of the defined variable,list, dictionary}
 
 
+# To Assign multiple
+    ${a}    ${b}    ${c} =    Get Three
+    ${first}    @{rest} =    Get Three
+    @{before}    ${last} =    Get Three
+    ${begin}    @{middle}    ${end} =    Get Three
+
+** Assuming that the keyword 'Get Three' returns a list [1, 2, 3], the following variables are created:
+    ${a}, ${b} and ${c} with values 1, 2, and 3, respectively.
+    ${first} with value 1, and @{rest} with value [2, 3].
+    @{before} with value [1, 2] and ${last} with value 3.
+    ${begin} with value 1, @{middle} with value [2] and ${end} with value 3.
+
+** It is an error if the returned list has more or less values than there are scalar variables to assign.
+** Additionally, only one list variable is allowed and dictionary variables can only be assigned alone.
+
+
+
+# To use keywords:
+
+    *** Keywords ***
+    Log a Username
+        [Arguments]    ${USERNAME}
+        log            ${USERNAME}
+
+    Log a Password
+        [Arguments]    ${PASSWORD}
+        log            ${PASSWORD}
+
+    log Usesrname and Password
+        [Arguments]    ${Username}  ${Password}
+        Log a Username    ${Username}
+        Log a Password    ${Password}
+----------------------------------
+    *** Variables ***
+    ${variable1}    my name
+    ${Variable2}    my
+----------------------------------
+    *** Test Cases ***
+    Test_Case4
+        [Tags]  KeyWordTest
+        log Usesrname and Password    ${VARIABLE1}  ${Variable2}
