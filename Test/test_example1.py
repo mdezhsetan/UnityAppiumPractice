@@ -10,5 +10,6 @@ def func(x):
     return x + 1
 
 
+@pytest.mark.one
 def test_method2(number):
     assert number != 6
