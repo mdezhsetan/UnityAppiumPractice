@@ -1,0 +1,15 @@
+pyTest file convention:
+        File name :  test_*.py or *test.py
+        Class name:  should start with Tes
+
+Run from terminal:
+        python -m pytest      //runs all the tests (with the mantioned convention)
+                                ... in the directory and subdirectory of the current folder
+                Example:        write @pytest.mark.first before a test_* method
+                                use command: py.test -m one
+
+        py.test OR pytest     //runs our test
+        pytest -v             // it runs with verbouse flag and shows more detail
+        pytest filename.py    //runs the file mentioned in the directory
+
+        py.test -k   [a substring to match the test function names] -v

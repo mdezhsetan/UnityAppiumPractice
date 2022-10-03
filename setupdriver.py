@@ -1,5 +1,5 @@
+from appium.webdriver import webdriver
 from appium import webdriver
-
 
 def setup_driver(port):
     desired_capabilities = {
@@ -10,7 +10,7 @@ def setup_driver(port):
         "platformVersion": "12",
         'altUnityHost': 'localhost',
         'altUnityPort': 13000,
-        "app": 'C:\\Users\\Mahshad\\Desktop\\build_apk\\Am13Sep.apk',
+        "app": 'C:\\Users\\Mahshad\\Desktop\\build_apk\\Am29Sep.apk',
 
     }
     return webdriver.Remote(command_executor='http://127.0.0.1:{0}'.format(port),
